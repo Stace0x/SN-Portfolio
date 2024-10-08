@@ -22,7 +22,7 @@ export default function Home() {
         <section className={styles.hero}>
           <h1 className={styles.title}>Welcome to My Portfolio</h1>
           <p className={styles.description}>
-            I'm a web developer passionate about creating amazing experiences.
+            I am a web developer passionate about creating amazing experiences.
           </p>
         </section>
 
@@ -30,7 +30,7 @@ export default function Home() {
           <h2>About Me</h2>
           <div className={styles.profile}>
             <p>
-              Hello! I'm a web developer with a passion for creating intuitive and efficient web applications. 
+              Hello! I am a web developer with a passion for creating intuitive and efficient web applications. 
               I specialize in React and Next.js, and I love turning complex problems into simple, beautiful solutions.
             </p>
           </div>
