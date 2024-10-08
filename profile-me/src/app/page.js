@@ -29,7 +29,6 @@ export default function Home() {
         <section id="about" className={styles.about}>
           <h2>About Me</h2>
           <div className={styles.profile}>
-            <img src="/placeholder.svg?height=150&width=150" alt="Profile" className={styles.avatar} />
             <p>
               Hello! I'm a web developer with a passion for creating intuitive and efficient web applications. 
               I specialize in React and Next.js, and I love turning complex problems into simple, beautiful solutions.
