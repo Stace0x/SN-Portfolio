@@ -1,0 +1,20 @@
+.about {
+  padding: 100px 20px;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.about h2 {
+  padding-bottom: 30px;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+

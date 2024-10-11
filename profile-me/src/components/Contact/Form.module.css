@@ -1,0 +1,64 @@
+.contact {
+  padding: 100px 20px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #2f477e, #160b2a);
+  position: relative; /* Required for absolute positioning of SVG */
+}
+
+.customShapeDividerTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1; /* Ensure the shape is below the content */
+}
+
+.customShapeDividerTop svg {
+  position: relative;
+  display: block;
+  width: calc(125% + 1.3px); /* Adjust width for a better fit */
+  height: 119px; /* Height of the SVG */
+}
+
+.shapeFill {
+  fill: #eeeef0; /* Fill color of the shape */
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  z-index: 2; /* Ensure the form is above the shape divider */
+}
+
+.contact h2 {
+  text-align: center;
+  z-index: 2; /* Ensure the title is above the shape divider */
+}
+
+.contact form input,
+.contact form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  background-color: #9a9a9d;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: #005bbf;
+}
