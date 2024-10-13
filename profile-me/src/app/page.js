@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import Hero from '@/components/Hero/Hero';
 import About from '@/components/About/About';
 import Form from '@/components/Contact/Form';
+import Projects from '@/components/Projects/Projects';
 
 export default function Home() {
  const [scrollY, setScrollY] = useState(0);
@@ -32,26 +33,7 @@ export default function Home() {
 
       <main>
         <Hero />
-        <About />
-
-        <section id="projects" className={styles.projects}>
-          <h2 className={styles.slide_in_left}>My Highlights</h2>
-          <div className={styles.project_grid}>
-            {[1, 2].map((project) => (
-              <div key={project} className={`${styles.project_card} ${styles.fade_in}`}>
-                <Image 
-                  src={`/images/card-pic-1.png`} 
-                  alt={`Project ${project}`} 
-                  width={300} 
-                  height={600} 
-                  layout="responsive" 
-                />
-                <h3>Project {project}</h3>
-                <p>A brief description of the project goes here.</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <Projects />
         <Form />
       </main>
 

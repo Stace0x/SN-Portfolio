@@ -1,25 +1,26 @@
 import styles from './Hero.module.css'
 import Image from 'next/image';
+import About from '../About/About';
 
 export default function Hero () {
   return (
     <div className={styles.mainArea}>
-      <div className={styles.title}>
-        <h1>
-        Hi, Stacey here <span className={styles.wavingHand}>🤚</span>
-        </h1>
-        <p>
-          Backend Developer
-        </p>
-      </div>
-      <div className={styles.profileImage}>
-        <Image
-          src="/images/profile-pic.jpg" 
-          alt="Profile picture" 
-          width={500} 
-          height={500} 
-          className={styles.roundedImage}
-        />
+      <div className={styles.content}>
+        <div className={styles.title}>
+          <h1>
+            Hi, Stacey here <span className={styles.wavingHand}>🤚</span>
+          </h1>
+          <p>Backend Developer</p>
+        </div>
+        <div className={styles.profileImage}>
+          <Image
+            src="/images/profile-pic.jpg"
+            alt="Profile picture"
+            width={400}
+            height={400}
+            className={styles.roundedImage}
+          />
+        </div>
       </div>
       <div className={styles.circles}>
         <div></div>
@@ -33,6 +34,7 @@ export default function Hero () {
         <div></div>
         <div></div>
       </div>
+      <About />
       <div className={styles.customShapeDividerBottom}>
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path

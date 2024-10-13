@@ -1,19 +1,52 @@
-.title {
+.mainArea {
+  background: linear-gradient(to left, #2f477e, #2f1954);
+  width: 100%;
+  height: 190vh;
   position: relative;
-  text-align: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 40px;
-  font-weight: 800;
-  z-index: 999;
-  margin-left: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.waving-hand {
-  display: inline-block; /* Necessary for transform to work properly */
-  animation: wave 1s infinite; /* Animation for waving */
+.content {
+  display: flex;
+  align-items: center; /* Center elements vertically */
+  justify-content: center; /* Center elements horizontally */
+  text-align: left; /* Left-align the text in the title */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 10%;
+}
+
+.title h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.title p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.profileImage {
+  margin-top: 10%;
+  margin-left: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.roundedImage {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wavingHand {
+  display: inline-block; 
+  animation: wave 2s infinite; /* Animation for waving */
 }
 
 @keyframes wave {
@@ -27,21 +60,12 @@
     transform: rotate(15deg); /* Tilt to the right */
   }
 }
-
-.mainArea {
-  background: linear-gradient(to left, #2f477e, #160b2a);
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 .circles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 200vh; /* Height matching the scroll area */
   overflow: hidden;
 }
 
@@ -54,7 +78,7 @@
   100% {
     opacity: 0;
     border-radius: 50%;
-    transform: translateY(-1000px) rotate(720deg);
+    transform: translateY(2000px) rotate(720deg); /* Moves the circles over 200vh */
   }
 }
 
@@ -65,8 +89,8 @@
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
-  bottom: -150px;
-  animation: animate 25s linear infinite;
+  top: -150px;
+  animation: animate 10s linear infinite; /* Longer duration for slower, smoother animation */
 }
 
 .circles div:nth-child(1) {
@@ -74,6 +98,7 @@
   width: 80px;
   height: 80px;
   animation-delay: 0s;
+  animation-duration: 45s;
 }
 
 .circles div:nth-child(2) {
@@ -81,7 +106,7 @@
   width: 20px;
   height: 20px;
   animation-delay: 2s;
-  animation-duration: 12s;
+  animation-duration: 40s; /* Slower */
 }
 
 .circles div:nth-child(3) {
@@ -89,6 +114,7 @@
   width: 20px;
   height: 20px;
   animation-delay: 4s;
+  animation-duration: 50s; /* Slower */
 }
 
 .circles div:nth-child(4) {
@@ -96,7 +122,7 @@
   width: 60px;
   height: 60px;
   animation-delay: 0s;
-  animation-duration: 18s;
+  animation-duration: 35s; /* Medium duration */
 }
 
 .circles div:nth-child(5) {
@@ -104,6 +130,7 @@
   width: 20px;
   height: 20px;
   animation-delay: 0s;
+  animation-duration: 60s; /* Slowest */
 }
 
 .circles div:nth-child(6) {
@@ -111,6 +138,7 @@
   width: 110px;
   height: 110px;
   animation-delay: 3s;
+  animation-duration: 55s; /* Slow */
 }
 
 .circles div:nth-child(7) {
@@ -118,6 +146,7 @@
   width: 150px;
   height: 150px;
   animation-delay: 7s;
+  animation-duration: 40s;
 }
 
 .circles div:nth-child(8) {
@@ -125,7 +154,7 @@
   width: 25px;
   height: 25px;
   animation-delay: 15s;
-  animation-duration: 45s;
+  animation-duration: 45s; /* Long duration */
 }
 
 .circles div:nth-child(9) {
@@ -133,7 +162,7 @@
   width: 15px;
   height: 15px;
   animation-delay: 2s;
-  animation-duration: 35s;
+  animation-duration: 50s;
 }
 
 .circles div:nth-child(10) {
@@ -141,8 +170,9 @@
   width: 150px;
   height: 150px;
   animation-delay: 0s;
-  animation-duration: 11s;
+  animation-duration: 55s;
 }
+
 
 .customShapeDividerBottom {
   position: absolute;
@@ -166,11 +196,4 @@
   fill: #eeeef0; /* Change this color to customize the SVG fill */
 }
 
-.profileImage {
-  margin-left: 250px;
-}
-
-.profileImage .roundedImage {
-  border-radius: 400px; /* Round the corners */
-}
 
