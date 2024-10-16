@@ -4,7 +4,8 @@
   width: 50vw;
   margin: 0 auto;
   margin-top: 35vh;
-  padding: 2em; width: 45vw;
+  padding: 2em;
+  max-width: 800px;
   background: rgba(26, 32, 57, 0.5); 
   text-align: center; border-radius: 10px;
   color: white;
