@@ -10,10 +10,10 @@ export default function Projects () {
       href:"https://github.com/SchoolOfCode/final-project-final-destination"
     },
     {
-      project:"Typescript Fundamentals",
-      imgSrc:"/images/studying-image-v1.png",
-      dspt:"How do we start writing Typescript",
-      href:""
+      project:"Fun with TypeScript",
+      imgSrc:"/images/Type-script-v2.png",
+      dspt:"Intro to typescript coding",
+      href:"https://github.com/Stace0x/Into-to-Typescript"
     },
   ];
 
@@ -27,8 +27,8 @@ export default function Projects () {
             <Image 
               src={project.imgSrc} 
               alt={`Project ${project.project}`} 
-              width={100} 
-              height={200} 
+              width={560} 
+              height={500} 
             />
             <h3>{project.project}</h3>
             <p>{project.dspt}</p>
