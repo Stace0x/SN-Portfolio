@@ -29,7 +29,6 @@ export default function Projects () {
               alt={`Project ${project.project}`} 
               width={100} 
               height={200} 
-              layout="responsive" 
             />
             <h3>{project.project}</h3>
             <p>{project.dspt}</p>

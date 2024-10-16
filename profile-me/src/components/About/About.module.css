@@ -1,20 +1,26 @@
 
+.about{
+  margin-top: 4rem;
+  padding: 4.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-.about {
-  width: 50vw;
-  margin: 0 auto;
-  margin-top: 35vh;
-  padding: 2em;
+.aboutBox {
   max-width: 800px;
+  text-align: center;
   background: rgba(26, 32, 57, 0.5); 
-  text-align: center; border-radius: 10px;
+  padding: 2rem;
+  border-radius: 10px;
   color: white;
   font-size: 17px;
   position: relative;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.about:hover {
+.aboutBox:hover {
   box-shadow: 
     0 0 5px rgba(255, 255, 255, 0.803),
     0 0 10px rgba(234, 41, 154, 0.889),
@@ -27,6 +33,7 @@
 
 .about h2 {
   padding-bottom: 30px;
+  font-size: 30px;
 }
 
 @keyframes slideInLeft {
