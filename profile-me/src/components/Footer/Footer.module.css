@@ -1,0 +1,51 @@
+.footer {
+  background-color: #160b2a; 
+  color: white; 
+  text-align: center;
+  padding: 20px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  flex-wrap: wrap; 
+}
+
+.socialLinks, .contactInfo {
+  flex: 1;
+  text-align: center;
+}
+
+.socialLinks p, .contactInfo p {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 19px;
+  color: #bfbfbf; /* Light gray text */
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+}
+
+.icon {
+  font-size: 35px;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+  color: #007bff; /* Change icon color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+.phoneNumber {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}

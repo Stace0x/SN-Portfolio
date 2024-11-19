@@ -1,12 +1,13 @@
 .projects {
-  padding: 150px 20px 150px;
+  padding: 40px 20px 150px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 4rem;
   align-content: center;
 }
 
 .projects h2 {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   font-size: 2rem;
 }
 
@@ -17,6 +18,7 @@
 }
 
 .project_card {
+  padding-bottom: 1.5rem;
   background-color: #fff;;
   border-radius: 10px;
   overflow: hidden;
@@ -52,7 +54,15 @@
   animation: fadeIn 1s ease-out;
 }
 
-.linkText{
+.linkText {
   margin: 0 1rem 1rem;
-  padding: 20px 0px
+  padding: 20px 0px;
+  font-size: 18px;
+  transition: 0.3s ease; 
+}
+
+.linkText:hover {
+  transform: scale(1.05); 
+  color: blue; 
+  font-weight: bold;
 }

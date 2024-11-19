@@ -41,8 +41,8 @@ export default function Form() {
       </div>
       <h2>Get in Touch</h2>
       {messageSent ? (
-        <p style={{ color: "green", fontSize: "1.2em" }}>
-          Your message has been sent successfully!
+        <p className={styles.successMessage}>
+          Your message has been sent successfully, Thank you for your time.
         </p>
       ) : (
         <form onSubmit={handleSubmit}>

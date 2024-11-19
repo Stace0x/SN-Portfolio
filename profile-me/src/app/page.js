@@ -8,6 +8,7 @@ import Hero from '@/components/Hero/Hero';
 import About from '@/components/About/About';
 import Form from '@/components/Contact/Form';
 import Projects from '@/components/Projects/Projects';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
  const [scrollY, setScrollY] = useState(0);
@@ -37,9 +38,7 @@ export default function Home() {
         <Form />
       </main>
 
-      <footer className={styles.footer}>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
