@@ -11,13 +11,17 @@ export default function Form() {
           ></path>
         </svg>
       </div>
-      <h2 className={styles.slide_in_left}>Get in Touch</h2>
-      <form className={styles.fade_in}>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
+      <h2>Get in Touch</h2>
+      <form
+        action="https://formspree.io/f/myzypjgy"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </section>
   );
 }
+
