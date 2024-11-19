@@ -1,6 +1,34 @@
 import styles from './Form.module.css';
+import { useState } from "react";
 
 export default function Form() {
+
+  const [messageSent, setMessageSent] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    const form = e.target;
+
+    try {
+      const response = await fetch("https://formspree.io/f/myzypjgy", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setMessageSent(true); 
+        form.reset(); // Optionally reset the form
+      } else {
+        alert("Failed to send the message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.customShapeDividerTop}>
@@ -12,15 +40,18 @@ export default function Form() {
         </svg>
       </div>
       <h2>Get in Touch</h2>
-      <form
-        action="https://formspree.io/f/myzypjgy"
-        method="POST"
-      >
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      {messageSent ? (
+        <p style={{ color: "green", fontSize: "1.2em" }}>
+          Your message has been sent successfully!
+        </p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      )}
     </section>
   );
 }
